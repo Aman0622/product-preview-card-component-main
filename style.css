@@ -1,0 +1,210 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+    5. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+    6. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/*
+    7. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/*
+    8. Create a root stacking context
+  */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  background-color: hsl(30, 38%, 92%);
+  height: 80vh;
+}
+
+#maindiv {
+  border: 2px solid black;
+  width: 40%;
+  height: 80%;
+  display: flex;
+  margin: 0 auto;
+  margin-top: 7em;
+  border-radius: 10px;
+  border-style: none;
+  background-color: white;
+}
+
+#imgdiv {
+  width: 50%;
+}
+
+#imgp {
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+#content {
+  width: 60%;
+  height: 100%;
+  padding: 2em;
+}
+
+#perfume {
+  font-family: "Fraunces", serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  letter-spacing: 0.2em;
+  font-size: 14px;
+}
+
+h1 {
+  width: 80%;
+  line-height: 1em;
+  font-family: "Fraunces", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  margin-top: 0.5em;
+}
+
+p {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-weight: 14px;
+}
+
+h1 + p {
+  margin-top: 1.5em;
+  font-size: 15px;
+}
+
+h1 + p + p {
+  margin-top: 0.9em;
+  color: hsl(158, 36%, 37%);
+  font-weight: bolder;
+  font-size: 28px;
+  font-family: "Fraunces", serif;
+  position: relative;
+}
+
+span {
+  font-size: 16px;
+  margin-left: 0.9em;
+  position: absolute;
+  margin-top: 0.6em;
+  color: grey;
+  font-weight: 500;
+}
+
+button {
+  background-color: hsl(158, 36%, 37%);
+  color: white;
+  height: 50px;
+  width: 90%;
+  display: flex;
+  font-size: 15px;
+  align-items: center;
+  border-radius: 10px;
+  border-style: none;
+  margin-top: 1em;
+  gap: 1em;
+  justify-content: center;
+}
+
+#icon {
+  height: 20px;
+  width: 10%;
+}
+#mobile {
+  display: none;
+}
+@media screen and (max-width: 1300px) {
+  #maindiv {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  #maindiv {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 550px) {
+  #imgp {
+    display: none;
+  }
+  #mobile {
+    display: block;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  #maindiv {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 115vh;
+    margin: 2em auto;
+  }
+  #imgdiv {
+    width: 100%;
+  }
+  #content {
+    width: 100%;
+  }
+}
